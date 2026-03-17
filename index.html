@@ -63,6 +63,31 @@
     input[type="range"] { -webkit-appearance: none; background: #374151; height: 6px; border-radius: 3px; }
     input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; background: linear-gradient(135deg, #3b82f6, #FFC637); border-radius: 50%; cursor: pointer; }
     .leaflet-control-attribution { display: none; }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .controls {
+        flex-wrap: wrap;
+        padding: 15px 20px 20px;
+        gap: 12px;
+      }
+      .title-section { display: none; }
+      .date-display { font-size: 28px; min-width: 70px; }
+      .stats { gap: 15px; }
+      .stat-dot { width: 10px; height: 10px; }
+      .stat-label { font-size: 11px; }
+      .timeline-section { flex: 1 1 100%; order: 10; min-width: unset; }
+      .play-controls { gap: 8px; }
+      button { padding: 8px 14px; font-size: 13px; }
+      .speed-control label { display: none; }
+      .speed-control select { padding: 6px 10px; font-size: 12px; }
+    }
+    
+    @media (max-width: 480px) {
+      .controls { padding: 12px 15px 15px; gap: 10px; }
+      .date-display { font-size: 24px; }
+      button { padding: 8px 12px; font-size: 12px; }
+    }
   </style>
 </head>
 <body>
