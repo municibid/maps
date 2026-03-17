@@ -238,12 +238,12 @@
         playInterval = setInterval(() => {
           idx++;
           if (idx >= allMonths.length) {
-            clearInterval(playInterval);
-            isPlaying = false;
-            document.getElementById('playBtn').textContent = '▶ Play';
-            return;
+            // Loop back to beginning
+            goToMonth(0);
+            idx = 0;
+          } else {
+            goToMonth(idx);
           }
-          goToMonth(idx);
         }, speed);
       }
     });
